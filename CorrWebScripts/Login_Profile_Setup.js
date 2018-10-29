@@ -30,8 +30,6 @@ function user_validation()
 
     });
 
-
-
 };
 
 //function assign_current_json_vals(id, role_stat, user, pw, email) {
