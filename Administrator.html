@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CorrWeb - Administrator Tools</title>
+    <link rel="stylesheet" href="Styles/corrweb_style.css"/>
+</head>
+<body>
+    <nav>
+        <div class="navcontainer">
+            <a href="index.html">Home</a>
+            <a href="Data_Tools.html">Data Visualization</a>
+            <a href="Administrator.html">Administrator Tools</a>
+            <a href="Profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+    <header>
+        <h1>Administrator Tools</h1>
+        <p>In this section it is possible to control the Teensy and correct any issues that may arise during the experiment.</p>
+        <p>Therefore it is also advised that you know exactly what you do before risking an experiment even with automated protocols.</p>
+    </header>
+    <article>
+        <section id="teensy_controls">
+            <h2>Teensy Controls</h2>
+            <p>Connected to Teensy:</p>
+
+            <p>Be aware that using these tools with send a request to the controlling unit.</p>
+            <p>This will halt its operation depending on the operation in question.</p>
+            <ul>
+                <li>
+                    <button id="pause">Pause</button>
+                </li>
+                <li>
+                    <button id="continue">Continue</button>
+                </li>
+                <li>
+                    <button id="stopmeasuring">Stop Measuring</button>
+                </li>
+            </ul>
+
+        </section>
+
+        <section id="network_controls">
+            <h2>Network Controls</h2>
+            <p>Connected to: </p>
+            <ul>
+                <li>
+                    <select id="network_finder"></select>
+                    <button id="find_networks">Find Networks</button>
+                <li>
+                    <input type="password" id="network_pw" placeholder="Password" />
+                    <button id="connect_to">Connect</button>
+                </li>
+                <li>
+                    <button id="reestablish">Re-Establish Connection</button>
+                </li>
+                <li>
+                    <button id="reset_connection">Reset Connection</button>
+                </li>
+            </ul>
+        </section>
+    </article>
+    <footer><p><small>Last updated on November 2018.</small></p></footer>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="CorrWebScripts/Connection_Controls.js"></script>
+    <script>
+        $(document).ready(function () {
+            setup_tools();
+        });
+    </script>
+</body>
+</html>

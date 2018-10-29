@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CorrWeb - Login</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/login.css" />
+</head>
+<body>
+
+    <h1>Teensy Controller and Data Access Point</h1>
+
+    <fieldset class="align-center">
+        <p>Enter login information</p>
+        <div class="align-center">
+            <ol>
+                <li>
+                    <label for="user_name">Username</label> <br />
+                    <input type="text" id="user_name" name="USER" autofocus tabindex="1"
+                           required="required" autocomplete="off" />
+                </li>
+                <li>
+                    <label for="password">Password</label> <br />
+                    <input type="password" id="PW" name="PW_input" tabindex="2" 
+                           required="required" autocomplete="off"/> <br />
+                </li>
+                <li>
+                    <input id="confirm_info" type="submit" tabindex="3" value="Login" />
+                </li>
+            </ol>
+        </div>
+    </fieldset>
+    <footer>
+        <p><small>Last updated on November 2018.</small></p>
+    </footer>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="CorrWebScripts/Login_Profile_Setup.js"></script>
+    <script>
+        $(document).ready(function () {
+            setup();
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+	"Users": [
+    {
+      "id": "#CWSS_T1@Researcher",
+      "username": "Steffan",
+      "email": "schmidt012@live.dk",
+      "password": "Schmidt",
+      "role_status": "admin"
+    },
+    {
+      "id": "#CWVS_T0@Placeholder",
+      "username": "Villy",
+      "email": "villy@email.dk",
+      "password": "Schmidt",
+      "role_status": "user"
+    },
+    {
+      "id": "#CWDD_T0@Placeholder",
+      "username": "Dummy1",
+      "email": "Dummy1@email.dk",
+      "password": "Dummy1",
+      "role_status": "user"
+    }
+	]
+}

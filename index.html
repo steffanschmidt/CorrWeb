@@ -1,13 +1,47 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>Dummy Website</title>
+    <meta charset="utf-8" />
+    <title>CorrWeb - Home</title>
+    <link rel="stylesheet" href="Styles/corrweb_style.css" />
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 </head>
-
 <body>
-<h1>Hello World</h1>
+    <nav>
+        <div class="navcontainer">
+            <a href="index.html">Home</a>
+            <a href="Data_Tools.html">Data Visualization</a>
+            <a href="Administrator.html">Administrator Tools</a>
+            <a href="Profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+    <header>
+        <h1>CorrWeb Home - Teensy Controller and Data Access Point</h1>
+        <p></p>
+        <div>
+            <img src="Images/Corrosion_logger.jpg" alt="Corrosion_logger" title="Corrosion Logger" id="corrosion_logger" />
+        </div>
+    </header>
+    <article>
+        <div>
+            <section id="connection_status">
+                <h2>Connection Status</h2>
+                <p>Connected to unit:</p>
+
+                <p>On network:</p>
+
+                <p>To access controls go to Administrator Tools</p>
+            </section>
+        </div>
+        <div>
+            <section id="data_point">
+                <h2>Data</h2>
+            </section>
+        </div>
+    </article>
+
+    <footer><p><small>Last updated on November 2018.</small></p></footer>
 
 </body>
-
-
 </html>

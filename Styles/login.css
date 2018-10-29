@@ -1,0 +1,79 @@
+﻿html {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(215, 235, 225);
+}
+
+.align-center {
+    display: inline-block;
+    margin: 5px auto;
+    text-align: center;
+}
+
+fieldset {
+    background-color: lightblue;
+    border-width: 2px;
+    border-color: black;
+    width: 400px;
+}
+
+fieldset p {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 5px auto;
+}
+
+ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+ol li {
+    list-style: none;
+    text-align: center;
+}
+
+button {
+    border-style: outset;
+    margin: 5px 5px;
+    border-width: 1px;
+    width: 200px;
+    height: 25px;
+    padding: 0px;
+    background-color: darkslategrey;
+}
+
+button:hover {
+    border: 2px;
+    background-color: dimgray;
+}
+
+button:active {
+    background-color: green;
+    border: 1px;
+    border: inset;
+}
+
+label {
+    font-size: 16px;
+    font-style: italic;
+}
+
+input {
+    border-width: 1px;
+    border-color: black;
+    width: 200px;
+    height: 25px;
+    margin: 5px 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer, footer p {
+    margin-top: 5px;
+}
