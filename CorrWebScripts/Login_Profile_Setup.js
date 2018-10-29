@@ -48,7 +48,7 @@ function user_validation()
 function login_form(validation, access_level)
 {
     if (validation) {
-        window.open("index.html", "_self", false);
+        window.open("home.html", "_self", false);
     }
     else {
         alert("Please check login information");
