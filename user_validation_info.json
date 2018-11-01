@@ -20,6 +20,20 @@
       "email": "Dummy1@email.dk",
       "password": "Dummy1",
       "role_status": "user"
-    }
+    },
+    {
+      "id": "#CWSM_T0@Scientist",
+      "username": "Enhjørning",
+      "email": "Dummy2@email.dk",
+      "password": "Asymmetrisk",
+      "role_status": "admin"
+    },
+    {
+      "id": "#CWDD_T0@DTU",
+      "username": "Peter",
+      "email": "pjsw@mek.dtu.dk",
+      "password": "Peter",
+      "role_status": "user"
+    }	
 	]
 }
