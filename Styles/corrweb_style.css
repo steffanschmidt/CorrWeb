@@ -113,7 +113,7 @@ section p {
 section {
     border: solid;
     border-width: 2px;
-    margin: 2px auto;
+    margin: 2px auto 5px 15px;
     padding: 15px;
     text-align: left;
     background-color: lightblue;
