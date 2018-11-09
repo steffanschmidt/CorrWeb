@@ -17,10 +17,6 @@ body {
     text-align: center;
 }
 
-.checkbox_text {
-
-}
-
 .navcontainer {
     padding: 1em 1em 1em 0em;
     max-width: 100%;
@@ -117,13 +113,14 @@ section p {
 section {
     border: solid;
     border-width: 2px;
-    margin: 2px auto 2px 15px;
+    margin: 2px auto;
     padding: 15px;
     text-align: left;
     background-color: lightblue;
     display: inline-block;
     width: 45%;
     border-radius: 5px 20px;
+    box-sizing: border-box;
 }
 
 #network_pw {
