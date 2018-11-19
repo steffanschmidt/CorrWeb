@@ -26,15 +26,15 @@
                 <ul>
                     <li>
                         <label for="user_id_profile">#ID</label>
-                        <input id="user_id_profile" type="text" readonly />
+                        <input id="user_id_profile" type="text" disabled />
                     </li>
                     <li>
                         <label for="user_priveledges_profile">User Access</label>
-                        <input id="user_priveledges_profile" type="text" readonly />
+                        <input id="user_priveledges_profile" type="text" disabled />
                     </li>
                     <li>
-                        <label for="user_name_profile">Profile Name</label>
-                        <input id="user_name_profile" type="text" />
+                        <label for="username_profile">Profile Name</label>
+                        <input id="username_profile" type="text" />
                     </li>
                     <li>
                         <label for="pw_profile">Password</label>
@@ -57,10 +57,12 @@
 
 
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="CorrWebScripts/Login_Profile_Setup.js"></script>
+    <script type="text/javascript" src="CorrWebScripts/Profile_Setup.js"></script>
+    <script type="text/javascript" src="CorrWebScripts/Default.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             profile_tools_setup();
+            defaultSetup();
         });
     </script>
 

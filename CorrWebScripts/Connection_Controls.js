@@ -7,7 +7,7 @@
     btn_setup_network = ["find_networks", "connect_to", "reestablish", "reset_connection"];
     btn_setup_network_fcn = [find_network, connect_to_network, reestablish_connection, rst_connection];
 
-    for (let i = 0; i < btn_setup_teensy.length ; i++)
+    for (let i = 0; i < btn_setup_teensy.length; i++)
     {
         let temp_obj = document.getElementById(btn_setup_teensy[i]);
         temp_obj.addEventListener("click", btn_setup_teensy_fcn[i]);
