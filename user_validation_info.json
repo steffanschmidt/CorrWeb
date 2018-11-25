@@ -34,6 +34,13 @@
       "email": "pjsw@mek.dtu.dk",
       "password": "Peter",
       "role_status": "user"
+    },
+    {
+      "id": "#CWDD_T0@LEGO",
+      "username": "User",
+      "email": "User@User.com",
+      "password": "Password",
+      "role_status": "user"
     }	
 	]
 }
