@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Steffan Schmidt - Home</title>
+    <link rel="stylesheet" href="MyStyles/myStyles.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#footer").load("Tabs/Generics/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="navigationalcontainer">
+            <a href="index.html">Home</a>
+            <a href="Tabs/game.html">Game</a>
+            <a href="Tabs/aboutme.html">About Me</a>
+            <a href="Tabs/corecompetencies.html">Core Competencies</a>
+            <a href="Tabs/nanoscience.html">Nanoscience</a>
+            <a href="Tabs/chemistry.html">Chemistry</a>
+            <a href="Tabs/theoretical.html">Materials Science</a>
+            <a href="Tabs/practical.html">Practical Work</a>
+            <a href="Tabs/programming.html">Programming</a>
+        </div>
+    </nav>
+    <div class="siteTheme">
+        <article>
+            <section id="introduction">
+                <div class="h2Box"><h1>Introduction</h1></div>
+                <p>
+                    <figure>
+                        <img id="steffanSchmidtImg" src="Images/SteffanS_Billede.png" alt="Image of Steffan Schmidt" title="Steffan Schmidt" />
+                        <figcaption>Picture of yours truly.</figcaption>
+                    </figure>
+                    First of all let me thank you for taking the time to visit my website.
+                </p>
+                <p>
+                    The purpose of this site is to give you a more in-depth knowledge on my competencies.
+                    It is intended to supplement my resume and application due to the limited amount of space on these and allow me to share who I am and what I can contribute with in greater detail.
+                </p>
+                <p>
+                    You can either learn about me by browsing this site or play the small mini-game in <a href="Tabs/game.html">Game</a>.
+                    This is intended to provide you with information in a fun and interactive way by allowing you to explore and select your topic(s) of interest.
+                </p>
+                <p>If you have questions feel free to contact me on either phone, email or LinkedIn found at the bottom of each page.</p>
+            </section>
+
+        </article>
+    </div>
+
+    <div id="footer" class="footerContainer"></div>
+
+    <script src="../MyScripts/ActiveLink.js"></script>
+    <script type="text/javascript" src="MyScripts/homeSetup.js"></script>
+    <script>
+        $(document).ready(function () {
+            home_setup();
+            findActiveLink();
+        });
+    </script>
+
+</body>
+</html>
