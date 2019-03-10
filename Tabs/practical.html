@@ -30,22 +30,138 @@
         <header>
             <section>
                 <div class="h2Box"><h1>Design and Production of Prototypes</h1></div>
-                <p>Something about practical</p>
+                <p>
+                    One of the core principals of <a href="nanoscience.html">Nanoscience</a> is interdisciplinarity. For me personally it goes beyond academic topics.
+                    I enjoy being able to create things on my own and having the ability to design practical applications for a range of purposes ranging from simple practical things
+                    for ones home to scientific equipment. However mainly the latter. This is especially true for testing purposes and prototype to product development. Therefore following
+                    my bachelors degree (2015) I took a one week course in CAD and machining at Aarhus University. This gave me the tools to both design and machine stuff on my own.
+                    It was also then I first came across 3D printing. Even since then I have expanded upon this and lately (February 2019), I just finished a month at the machining workshop at
+                    at the department of chemistry, Aarhus University. My main competencies in this field are:
+                    <ul>
+                        <li>CAD (Autodesk Inventor).</li>
+                        <li>Machining - Milling and Turning.</li>
+                        <li>3D Printing.</li>
+                        <li>CNC Machining (Roland MDX40-A).</li>
+                        <li>Microcontrollers and Electronic Circuit Design incl. IoT.</li>
+                    </ul>
+                    Furthermore I also got some knowledge about the following topics during the internship:
+                    <ul>
+                        <li>Inventor HSM (CAM).</li>
+                        <li>Stress Analysis and Simulation in Autodesk Inventor.</li>
+                        <li>EAGLE - for Electronic Circuit design.</li>
+                    </ul>
+                    Some of this will be presented below.
+                </p>
             </section>
         </header>
         <article>
             <section id="designPrototyping">
                 <div class="h2Box"><h2>CAD Design</h2></div>
-
+                <figure>
+                    <img  src="../Images/OctahedronMold.jpg" alt="Mold for making octahderon for high pressure synthesis." title="Mold for making octahdron for high pressure synthesis."/>
+                    <figcaption>Mold for making ceramics octahedron for High Pressure Synthesis. It is made in PTFE and have been machined on a CNC (Roland MDX-40A).</figcaption>
+                </figure>
+                <p>
+                    As can be seen from above I have been using CAD (Autodesk Inventor) for the better part of four years. Usually this has been singular component or small setups comprising of a few.
+                    During my masters I designed simple containers for a variety of purposes, research equipment (Cryo DAC Cell and small Autoclave Wells for sol-gel synthesis) and molding forms 
+                    for ceramic components for <a href="chemistry.html#highPressure">High Pressure Synthesis</a> and some more minor projects related to it. The molding form for an octahedron can be
+                    seen in the figure.
+                    However during my time at the workshop I got to work more with assemblies, constraints and joints. This was partly due to a bigger focus on learning the steps from design to
+                    production in greater detail, but mostly out of necessity due to the size and complexity of my main project, namely a large scale corrosion setup as can be seen under 
+                    <a href="practical.html#machining">Manufacturing</a>. In other words I have a broad experience with CAD and design of components, but admittedly Autodesk Inventor still has
+                    a lot for me to explore.
+                </p>
             </section>
 
             <section id="print3d">
                 <div class="h2Box"><h2>3D Printing</h2></div>
+                <div class="ImageAssembly">
+                    <figure>
+                        <img src="../Images/3DPrint.jpg" alt="3D Printer" title="3D Printer" />
+                        <figcaption>
+                            3D printer printing a component for my large corrosion setup seen on this page. The plastic used is PLA.
+                        </figcaption>
+                    </figure>
+                    <figure id="SmallCorrSetup">
+                        <img src="../Images/CorrosionSetupSmall.jpg" alt="Corrosion setup for testing objects of smaller size, irrespective of geometric shapes." title="Small Corrosion Setup" />
+                        <figcaption>
+                            Small corrosion setup mainly made by 3D printing for corrosion testing purposes. It features a main axes where the test object is to be placed and a window for observing it.
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <p>
+                    I have been using 3D printing for the better part of four years on an on/off basis because, I did not have one myself, and I could only do it at Aarhus University.
+                    However since I got my own 3D printer, I have made significant progress in understand how to achieve a great end results. The main reason I have used 3D printing a lot is
+                    that it is easy to use, cheap and quick to use for making prototypes. It allows for flexible designs and some of the features that is possible to print is not possible
+                    or very hard to recreate by machining in one go and vice versa. Even though it is slow for production purposes, then it is great for development or just components small
+                    components that are hard to make otherwise and does not need a lot of strength. I have mainly printed with PLA, but also used ABS a couple of times.
+                </p>
+
+                <div class="subtitle"><p>Experimental 3D Printed Corrosion Setup (Left Image)</p></div>
+                <p>
+                    The setup can accommodate different geometric shapes due to the flexible design. Furthermore there are four small and large slots, where two of the latter are reserved for the main axes.
+                    These can be opened and closed freely and are intended for aeration, wires, additional materials etc. The sample holders can be moved up and down by using the screws seen in the red and blue holder.
+                    Last there are two small holes at each of the four large slots for possibility of expansion in order to add features and/or equipment for experimental or practical reason.
+                    The entire setup was designed to be placed on top of a crystallization bowl as shown and that on top of a magnetic stirrer for heating purposes.
+                    Therefore due to a semi-closed environment, it is possible to simulate marine conditions and how it affects corrosion both in water and air.
+                    Lastly there is a window for observation from the top, and since the sample object is in a crystallization bowl, it makes it possible to observe the progress with ones own eye throughout
+                    the entire duration of the experiment.
+                </p>
 
             </section>
 
             <section id="machining">
                 <div class="h2Box"><h2>Manufacturing</h2></div>
+                <div id="machiningImgContainer" class="ImageAssembly">
+                    <figure>
+                        <img src="../Images/ManMachiningBench_30.jpg" alt="Milling machine." title="Milling machine." />
+                        <figcaption>Standard milling machine working from a top approach.</figcaption>
+                    </figure>
+                    <figure id="sideMilling">
+                        <img src="../Images/SideMillingMachine_30.jpg" alt="Sideways milling machine." title="Sideways milling machine." />
+                        <figcaption>
+                            Milling machine but instead of working from the top, it can work from the side allowing for other operations to be done compared to the top of a regular milling machine.
+                        </figcaption>
+                    </figure>
+                    <figure id="turningBench">
+                        <img src="../Images/ManTurningBench_30.jpg" alt="Lathe" title="Lathe" />
+                        <figcaption>Lathe for turning and making other operations.</figcaption>
+                    </figure>
+                    <figure id="CNCMachine">
+                        <img src="../Images/CNC_MDX40_Small.jpg" alt="Tabletop CNC (Roland MDX40-A)" title="Tabletop CNC (Roland MDX40-A)" />
+                        <figcaption>
+                            Tabletop CNC machine used for making components in everything ranging from soft to hard wood including most plastics.
+                            I have made components using PTFE, POM, PE, PLA and compact laminate with it.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    The possible for me to be able to manufacture things and make my test setups through other means other than 3D printing has been of integral important to me.
+                    Even though machining is not an academic discipline by itself, then I personally quite enjoy milling or turning in order to achieve a nice surface finish and 
+                    make a great product in the end. In other words I am not afraid of leaving my computer and helps out with practical issues in case that should arise. Furthermore
+                    I have used a broad range of machines, which makes it easy for me to visualize and know what can be done and what cannot be done. It should be noted that even though
+                    modern machines such as CNC was available to me, then I made most of my large scale corrosion setup as seen below by hand. The only part that was not made by hand was
+                    the polycarbonate top plate in order to minimize damage (it turns opaque) and to achieve a better finish. Since this part of critical importance due to visibility,
+                    it was milled in a large CNC (not the one shown here).
+                </p>
+
+                <figure id="largeCorrosionSetup">
+                    <img src="../Images/CorrosionSetupLarge.jpg" alt="Large Corrosion Setup" title="Large Corrosion Setup" />
+                    <figcaption>
+                        Corrosion setup made for large objects. This has an internal size of 40x25x20 cm and will be a closed system.
+                        The bottoms contains two aluminium blocks for heating and the top is transparent for observation and recording.
+                        Some parts are still missing along with all the electronics for the setup to be complete.
+                    </figcaption>
+                </figure>
+
+
+                <div class="subtitle"><p>Large Scale Corrosion Setup</p></div>
+                <p>
+
+                </p>
 
             </section>
 
@@ -65,7 +181,6 @@
                 <p>
                     For this reason I chose to start learning how to work with and program a Teensy, which is a computational powerful Arduino.
                     Read more about the programming of these in <a href="programming.html#microcontrollers">Programming</a>.
-                </p>
                 </p>
             </section>
         </article>
