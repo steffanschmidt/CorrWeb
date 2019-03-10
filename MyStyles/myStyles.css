@@ -112,6 +112,7 @@ p {
     font-weight: normal;
     padding: 2px;
     line-height: 1.4em;
+	text-align: justify;
 }
 
 .subtitle p {
