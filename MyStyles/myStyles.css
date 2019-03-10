@@ -111,7 +111,7 @@ p {
     font-size: 16px;
     font-weight: normal;
     padding: 2px;
-    line-height: 1.2em;
+    line-height: 1.4em;
 }
 
 .subtitle p {
@@ -209,4 +209,29 @@ figcaption {
 
 .gameMessage {
     
+}
+
+.ImageAssembly {
+    float: right;
+    padding: 0px 10px;
+}
+
+
+#SmallCorrSetup {
+    clear: left;
+    float: right;
+}
+
+#sideMilling, #turningBench, #CNCMachine {
+    clear: left;
+    float: right;
+}
+
+#machining p {
+    text-align: justify;
+}
+
+#largeCorrosionSetup {
+    clear: both;
+    float: right;
 }
