@@ -1,0 +1,218 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+html {
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     background-color: mintcream;
+ }
+
+body {
+    background-image: url('../GameArt/WavesWebsite.png');
+    background-repeat: repeat;
+    background-position: left bottom;
+}
+
+.siteTheme {
+}
+
+article, header {
+    margin: 5px 15px;
+}
+
+article {
+    min-height: calc(100vh - 50px);
+}
+
+footer {
+    margin: 0px 15px;
+}
+
+footer p {
+    padding: 0px;
+}
+
+.footerContactInfo {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+}
+
+#footerName {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+.footerContainer {
+    max-width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: burlywood;
+    border-top: solid;
+    border-color: firebrick;
+    padding: 0px 15px 5px 15px;
+}
+
+.footerInfoName {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+address {
+    padding: 15px 0px;
+    margin: 5px 0px;
+    font-style: normal;
+}
+
+.generalPurposeBox {
+    color: black;
+    margin: 3px 0px;
+    padding: 3px 3px;
+}
+
+.navigationalcontainer {
+    padding: 1em 1em;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: solid;
+    border-top: solid;
+    border-color: firebrick;
+}
+
+nav {
+    background-color: burlywood;
+    line-height: 1.6em;
+    margin-bottom: 0px;
+}
+
+nav div a {
+    color: black;
+    padding: 1em;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+nav div a:hover {
+    background-color: firebrick;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 4px 4px;
+ }
+
+.activeLink {
+    border: outset;
+    border-width: 1px;
+    border-color: black;
+    background-color: lightgreen;
+    font-weight: bold;
+    border-radius: 4px 4px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 2px;
+    line-height: 1.2em;
+}
+
+.subtitle p {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0px 0px 5px 0px;
+}
+
+.h2Box {
+    margin: 0 auto;
+    border-bottom: solid;
+    border-bottom-color: firebrick;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 5px 0px;
+}
+
+section {
+    margin: 5px 0px;
+    padding: 5px 3px;
+    border: solid;
+    border-color: firebrick;
+    background-color: burlywood;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+ul li {
+    list-style: inside;
+    font-size: 14px;
+    padding: 2px 0px;
+    margin-left: 20px;
+}
+
+
+/*.gameButtonContainer {
+    text-align: center;
+}*/
+
+.gameButtonContainer ul li {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+button {
+    font-size: 16px;
+    padding: 3px 3px;
+    font-weight: bold;
+}
+
+figure {
+    float: right;
+    clear: both;
+    margin: 10px 10px;
+    display: table;
+}
+
+figcaption {
+    text-align: center;
+    display: table-caption;
+    caption-side: bottom;
+    font-size: 14px;
+}
+
+#gameArea {
+    text-align: center;
+    vertical-align: top;
+}
+
+#game {
+    width: 750px;
+    height: 450px;
+    margin: 20px auto;
+    display: inline-block;
+    background-image: url(../GameArt/WallGame100x90.png);
+    background-repeat: repeat;
+    background-position: left bottom;
+}
+
+#gameControls, #gameChatter {
+    width: 200px;
+    height: 450px;
+    margin: 20px auto;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.gameMessage {
+    
+}
