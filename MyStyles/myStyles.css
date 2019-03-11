@@ -65,6 +65,7 @@ address {
     color: black;
     margin: 3px 0px;
     padding: 3px 3px;
+    clear: both;
 }
 
 .navigationalcontainer {
@@ -118,7 +119,10 @@ p {
 .subtitle p {
     font-size: 18px;
     font-weight: bold;
-    text-decoration: underline;
+    border-bottom: solid;
+    margin: 0 auto;
+    border-bottom-color: black;
+    border-width: 2px;
 }
 
 h1 {
@@ -149,7 +153,7 @@ section {
 
 ul li {
     list-style: inside;
-    font-size: 14px;
+    font-size: 16px;
     padding: 2px 0px;
     margin-left: 20px;
 }
@@ -178,7 +182,7 @@ figure {
 }
 
 figcaption {
-    text-align: center;
+    text-align: justify;
     display: table-caption;
     caption-side: bottom;
     font-size: 14px;
@@ -190,8 +194,6 @@ figcaption {
 }
 
 #game {
-    width: 750px;
-    height: 450px;
     margin: 20px auto;
     display: inline-block;
     background-image: url(../GameArt/WallGame100x90.png);
@@ -205,25 +207,25 @@ figcaption {
     margin: 20px auto;
     display: inline-block;
     overflow: hidden;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 2px 2px;
 }
 
 
 .gameMessage {
+    background-color: white;
     
 }
 
 .ImageAssembly {
     float: right;
     padding: 0px 10px;
+    clear: both;
 }
 
-
-#SmallCorrSetup {
-    clear: left;
-    float: right;
-}
-
-#sideMilling, #turningBench, #CNCMachine {
+#sideMilling, #turningBench, #CNCMachine, #SmallCorrSetup, #videoPythonComp {
     clear: left;
     float: right;
 }
@@ -232,7 +234,17 @@ figcaption {
     text-align: justify;
 }
 
-#largeCorrosionSetup {
+#largeCorrosionSetup, .videoAssembly {
     clear: both;
     float: right;
+    vertical-align: bottom;
+}
+
+.videoFig {
+    margin: 0px;
+    margin: 15px 10px;
+}
+
+video {
+    width: 400px;
 }
