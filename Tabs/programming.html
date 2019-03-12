@@ -40,7 +40,7 @@
                     <div class="subtitle"><p>Matlab</p></div>
                     <div class="videoAssembly">
                         <figure class="videoFig">
-                            <video controls>
+                            <video id="videoMatlabSim" controls>
                                 <source src="../Videos/Matlab_SimKompetencer.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -62,7 +62,7 @@
                     <div class="subtitle"><p>Python</p></div>
                     <div class="videoAssembly">
                         <figure class="videoFig">
-                            <video controls>
+                            <video id="videoPythonSim" controls>
                                 <source src="../Videos/A Tale of Learning.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -74,7 +74,7 @@
                         </figure>
 
                         <figure id="videoPythonComp" class="videoFig">
-                            <video controls>
+                            <video id="videoPythonCompetencies" controls>
                                 <source src="../Videos/Interaktivt Kompetence CV.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -122,9 +122,11 @@
     <div id="footer" class="footerContainer"></div>
 
     <script src="../MyScripts/ActiveLink.js"></script>
+    <script src="../MyScripts/VideoController.js"></script>
     <script>
         $(document).ready(function () {
             findActiveLink();
+            videoSetup();
         })
     </script>
     <noscript>Your browser does not support JavaScript. This will affect the outcome and your experience on this website.</noscript>

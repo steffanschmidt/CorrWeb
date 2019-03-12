@@ -7,6 +7,7 @@
 html {
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
      background-color: mintcream;
+     margin-top: 63px;
  }
 
 .siteTheme {
@@ -70,11 +71,15 @@ address {
 
 .navigationalcontainer {
     padding: 1em 1em;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     border-bottom: solid;
     border-top: solid;
     border-color: firebrick;
+    position: fixed;
+    top: 0px;
+    overflow: hidden;
+    background-color: burlywood;
 }
 
 nav {
@@ -217,6 +222,12 @@ figcaption {
 .gameMessage {
     background-color: white;
     
+}
+
+#playerCvs {
+    position: absolute;
+    width: 850px;
+    height: 458px;
 }
 
 .ImageAssembly {
