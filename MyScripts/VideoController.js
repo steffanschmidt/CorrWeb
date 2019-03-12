@@ -18,19 +18,16 @@ function videoSetup() {
 }
 
 function pausePythonVideos() {
-    alert("I am here 1");
     pythonInterfaceVideo.pause();
     pythonSimulationVideo.pause();
 }
 
 function pauseSimVideos() {
-    alert("I am here 2");
     pythonSimulationVideo.pause();
     matlabSimulationVideo.pause();
 }
 
 function pauseOthers() {
-    alert("I am here 3");
     pythonInterfaceVideo.pause();
     matlabSimulationVideo.pause();
 }
