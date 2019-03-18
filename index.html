@@ -25,6 +25,9 @@
             <a href="Tabs/programming.html">Programming</a>
         </div>
     </nav>
+
+    <canvas id="bckGroundCanvas"></canvas>
+
     <div class="siteTheme">
         <article>
             <section id="introduction">
@@ -32,7 +35,7 @@
                 <p>
                     <figure>
                         <img id="steffanSchmidtImg" src="Images/SteffanS_Billede.png" alt="Image of Steffan Schmidt" title="Steffan Schmidt" />
-                        <figcaption>Picture of yours truly.</figcaption>
+                        <figcaption id="steffanSchmidtImgCaption">Picture of yours truly.</figcaption>
                     </figure>
                     First of all let me thank you for taking the time to visit my website.
                 </p>
@@ -45,11 +48,22 @@
                     This is intended to provide you with information in a fun and interactive way by allowing you to explore and select your topic(s) of interest.
                 </p>
                 <p>If you have questions feel free to contact me on either phone, email or LinkedIn found at the bottom of each page.</p>
-
                 <em>
                     Note: This site is under development and by no means done. Therefore expect changes and even though I attempt to at least have the core content in place, I cannot guarantee
                     some things may be removed or missing entirely.
                 </em>
+
+            </section>
+            <section id="animations">
+                <div class="h2Box"><h2>Animations</h2></div>
+                <p>
+                    This site contains an animated background. However due to the fact it is meant as an informal site, then as fun as they might be to code and for the first two minutes
+                    of watching, then it is possible to turn them on / off using the buttons seen below. This will be saved for the other topics found on this site. They are per default turned on.
+                </p>
+                <div id="animationControls">
+                    <button id="turnOnAnimation">Turn Animation On</button>
+                    <button id="turnOffAnimation">Turn Animation Off</button>
+                </div>
             </section>
 
         </article>
@@ -58,10 +72,12 @@
     <div id="footer" class="footerContainer"></div>
     <script src="../MyScripts/ActiveLink.js"></script>
     <script type="text/javascript" src="MyScripts/homeSetup.js"></script>
+    <script type="text/javascript" src="MyScripts/siteAnimation.js"></script>
     <script>
         $(document).ready(function () {
             home_setup();
             findActiveLink();
+            startAnimation();
         });
     </script>
 
