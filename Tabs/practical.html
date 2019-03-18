@@ -26,6 +26,9 @@
             <a href="programming.html">Programming</a>
         </div>
     </nav>
+
+    <canvas id="bckGroundCanvas"></canvas>
+
     <div class="siteTheme">
         <header>
             <section>
@@ -58,15 +61,15 @@
             <section id="designPrototyping">
                 <div class="h2Box"><h2>CAD Design</h2></div>
                 <figure>
-                    <img  src="../Videos/CAD_DrawGif2.gif" alt="GIF of drawing inventor CAD." title="GIF of CAD drawing of man with a hat."/>
+                    <img src="../Videos/CAD_DrawGif2.gif" alt="GIF of drawing inventor CAD." title="GIF of CAD drawing of man with a hat." />
                 </figure>
                 <p>
                     As can be seen from above I have been using CAD (Autodesk Inventor) for the better part of four years. Usually this has been singular component or small setups comprising of a few.
-                    During my masters I designed simple containers for a variety of purposes, research equipment (Cryo DAC Cell and small Autoclave Wells for sol-gel synthesis) and molding forms 
+                    During my masters I designed simple containers for a variety of purposes, research equipment (Cryo DAC Cell and small Autoclave Wells for sol-gel synthesis) and molding forms
                     for ceramic components for <a href="chemistry.html#highPressure">High Pressure Synthesis</a> and some more minor projects related to it. The molding form for an octahedron can be
                     seen in the figure.
                     However during my time at the workshop I got to work more with assemblies, constraints and joints. This was partly due to a bigger focus on learning the steps from design to
-                    production in greater detail, but mostly out of necessity due to the size and complexity of my main project, namely a large scale corrosion setup as can be seen under 
+                    production in greater detail, but mostly out of necessity due to the size and complexity of my main project, namely a large scale corrosion setup as can be seen under
                     <a href="practical.html#machining">Manufacturing</a>. In other words I have a broad experience with CAD and design of components, but admittedly Autodesk Inventor still has
                     a lot for me to explore.
                 </p>
@@ -197,9 +200,11 @@
     <div id="footer" class="footerContainer"></div>
 
     <script src="../MyScripts/ActiveLink.js"></script>
+    <script src="../MyScripts/siteAnimation.js"></script>
     <script>
         $(document).ready(function () {
             findActiveLink();
+            startAnimation();
         })
     </script>
     <noscript>Your browser does not support JavaScript. This will affect the outcome and your experience on this website.</noscript>

@@ -5,12 +5,13 @@
 
 
 html {
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     background-color: mintcream;
-     margin-top: 63px;
- }
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: mintcream;
+    margin-top: 57px;
+}
 
 .siteTheme {
+    z-index: 0;
 }
 
 article, header {
@@ -74,7 +75,6 @@ address {
     width: 100%;
     margin: 0 auto;
     border-bottom: solid;
-    border-top: solid;
     border-color: firebrick;
     position: fixed;
     top: 0px;
@@ -84,7 +84,7 @@ address {
 
 nav {
     background-color: burlywood;
-    line-height: 1.6em;
+    line-height: 1.4em;
     margin-bottom: 0px;
 }
 
@@ -97,20 +97,21 @@ nav div a {
 
 
 nav div a:hover {
-    background-color: firebrick;
+    /*background-color: firebrick;*/
     border: solid;
-    border-width: 1px;
-    border-color: black;
+    border-width: 2px;
+    border-color: firebrick;
     border-radius: 4px 4px;
- }
+}
 
 .activeLink {
-    border: outset;
-    border-width: 1px;
-    border-color: black;
-    background-color: lightgreen;
+    border: solid;
+    border-width: 2px;
+    border-color: firebrick;
+    background-color: firebrick;
     font-weight: bold;
     border-radius: 4px 4px;
+    color: mintcream;
 }
 
 p {
@@ -147,13 +148,14 @@ h2 {
 }
 
 section {
-    margin: 5px 0px;
+    margin: 10px 0px;
     padding: 5px 3px;
     border: solid;
     border-color: firebrick;
-    background-color: burlywood;
+    background-color: rgba(222, 184, 135, 0.8);
     overflow: hidden;
     border-radius: 10px;
+
 }
 
 ul li {
@@ -171,6 +173,18 @@ ul li {
 .gameButtonContainer ul li {
     list-style-type: none;
     margin-left: 0px;
+}
+
+section {
+    font-size: 16px;
+}
+
+.rotateRight {
+    animation: rotation 2s linear infinite;
+}
+
+.rotateLeft {
+    transform: rotate(-30);
 }
 
 button {
@@ -193,6 +207,10 @@ figcaption {
     font-size: 14px;
 }
 
+#steffanSchmidtImgCaption {
+    text-align: center;
+}
+
 #gameArea {
     text-align: center;
     vertical-align: top;
@@ -204,6 +222,7 @@ figcaption {
     background-image: url(../GameArt/WallGame100x90.png);
     background-repeat: repeat;
     background-position: left bottom;
+    z-index: -1;
 }
 
 #gameControls, #gameChatter {
@@ -221,7 +240,6 @@ figcaption {
 
 .gameMessage {
     background-color: white;
-    
 }
 
 #playerCvs {
@@ -258,4 +276,8 @@ figcaption {
 
 video {
     width: 400px;
+}
+
+#animationControls {
+    text-align: center;
 }

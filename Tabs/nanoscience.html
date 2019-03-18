@@ -27,6 +27,8 @@
         </div>
     </nav>
 
+    <canvas id="bckGroundCanvas"></canvas>
+
     <div class="siteTheme">
         <header>
             <section>
@@ -94,9 +96,11 @@
     <div id="footer" class="footerContainer"></div>
 
     <script src="../MyScripts/ActiveLink.js"></script>
+    <script src="../MyScripts/siteAnimation.js"></script>
     <script>
         $(document).ready(function () {
             findActiveLink();
+            startAnimation();
         })
     </script>
     <noscript>Your browser does not support JavaScript. This will affect the outcome and your experience on this website.</noscript>

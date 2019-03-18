@@ -26,6 +26,7 @@
             <a href="programming.html">Programming</a>
         </div>
     </nav>
+    <canvas id="bckGroundCanvas"></canvas>
     <div class="siteTheme">
         <article id="gameArea">
             <section>
@@ -42,6 +43,32 @@
                             <li>
                                 <button id="resetPlayer">Move to Start Position</button>
                             </li>
+                            <li>
+                                <button id="soundBtn"></button>
+                            </li>
+                            <li>
+                                <label for="bodyColorSelecter">Body Color: </label>
+                                <select id="bodyColorSelecter">
+                                    <option value="red">Red</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="purple">Magenta</option>
+                                    <option value="hotpink">Hotpink</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="eyeColorSelector">Eye Color: </label>
+                                <select id="eyeColorSelecter">
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                    <option value="red">Red</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="purple">Magenta</option>
+                                    <option value="hotpink">Hotpink</option>
+                                </select>
+                            </li>
+
                         </ul>
                         <p>In order to move around in the game, use the following keys.</p>
                         <p>
@@ -50,6 +77,8 @@
                             W = Jump <br />
                             E = Enter door
                         </p>
+                        <em>In case you do not see doors, windows and platforms, please refresh the page. It should then appear.</em>
+
                     </div>
                 </div>
 
@@ -66,10 +95,12 @@
     <div id="footer" class="footerContainer"></div>
 
     <script type="text/javascript" src="\MyScripts/gameSetup.js"></script>
+    <script src="../MyScripts/siteAnimation.js"></script>
     <script src="../MyScripts/ActiveLink.js"></script>
     <script>
         $(document).ready(function () {
             findActiveLink();
+            startAnimation();
             game_setup();
         });
     </script>

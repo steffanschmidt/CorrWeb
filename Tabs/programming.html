@@ -26,6 +26,9 @@
             <a href="programming.html">Programming</a>
         </div>
     </nav>
+
+    <canvas id="bckGroundCanvas"></canvas>
+
     <div class="siteTheme">
         <header>
             <section>
@@ -50,11 +53,34 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <p>Something</p>
-
+                    <p>
+                        Matlab was the first language I ever learned how to program in. Before then I only experimented a bit with macros in Excel.
+                        This happened during my second year at university in the course "Computational Physics". In this course I learned about a lot of the basics in
+                        programming and how to do plot stuff, solve equation for an unknown, integrate, solve differentiel equation and simulate.
+                        However it was not until I had to work with it at <a href="theoretical.html#theoryTerma">Terma</a> that I really learned how things worked.
+                        For me this was the beginning of a much larger interest for programming in general and during the last couple of months at Terma, I learned
+                        how to work build and work with interfaces.
+                    </p>
+                    <p>
+                        After Terma I continued my programming adventure and since I wanted to learn more about creating interfaces, I started making another one
+                        for my former supervisor at inorganic chemistry. This was meant to analyze data from high pressure experiments with different models for
+                        Equation of State (EoS) and make it easy to compare the results of these models to determine which one was best suited to describe the data.
+                        Other than that I helped some of the younger students with scripting and I wrote some myself. Most notably a plotting tool that automated the
+                        tedious process of plotting the results and bragg peaks/positions from rietveld refinements. This method is used all the time in inorganic chemistry
+                        for powder analysis, hence it would save a lot of time.
+                    </p>
+                    <p>
+                        To summarize my most important competencies in Matlab are:
+                    </p>
                     <ul>
-                        <li>Hello World</li>
+                        <li>Analyzing data and plotting the results.</li>
+                        <li>Solving (differentials) equations and integrating.</li>
+                        <li>Making simulations.</li>
+                        <li>Designing interfaces.</li>
                     </ul>
+                    <p>
+                        It was also at this time, I started being interested in Python, which I have been programming in ever since.
+                    </p>
 
                 </div>
 
@@ -123,9 +149,11 @@
 
     <script src="../MyScripts/ActiveLink.js"></script>
     <script src="../MyScripts/VideoController.js"></script>
+    <script src="../MyScripts/siteAnimation.js"></script>
     <script>
         $(document).ready(function () {
             findActiveLink();
+            startAnimation();
             videoSetup();
         })
     </script>
