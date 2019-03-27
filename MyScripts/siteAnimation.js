@@ -11,7 +11,7 @@ var amountOfShapes = 50;
 var cirlceSpawnProbability = 0.7;
 var startVelocity = 18;
 var shapeSizeMax = 15;
-var shapeSizeMin = 5;
+var shapeSizeMin = 10;
 var animationHandler = null;
 
 
@@ -74,13 +74,13 @@ function createNewRandomShape() {
     var shapeSize = Math.random() * (shapeSizeMax - shapeSizeMin) + shapeSizeMin;
     var x = Math.random() * (window.innerWidth - shapeSize * 2);
     var y = Math.random() * (window.innerHeight - shapeSize * 2) + window.innerHeight / 2;
-    var vy = (startVelocity - shapeSize) / 4;
+    var vy = (startVelocity - shapeSize) / 6;
     var randomizer = Math.random();
     if (randomizer <= cirlceSpawnProbability) {
         randomObject = new Circle(x, y, vy, shapeSize, color);
     }
     else {
-        randomObject = new Square(x, y, vy, shapeSize, color);
+        randomObject = new Square(x, y, vy, 1.5 * shapeSize, color);
     }
     return randomObject;
 }
