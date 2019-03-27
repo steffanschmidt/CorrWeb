@@ -25,9 +25,9 @@ doorImg.src = "../GameArt/DoorGame2.png";
 platformImg.src = "../GameArt/DoorPlatform.png";
 windowImg.src = "../GameArt/WindowGame.png";
 
-var gravity = 1;
-var velocityX = 3;
-var velocityY = 5;
+var gravity = 0.1;
+var velocityX = 6;
+var velocityY = 6;
 var soundOutside;
 var soundInside;
 var soundDoor;
@@ -61,7 +61,7 @@ function game_setup() {
     });
 
     startBtnState();
-    doorPositions = drawStage();
+    gameObjPos = drawStage();
 
     if (sessionStorage.setItem("muted", 0) == null) {
         sessionStorage.setItem("muted", 0);
@@ -69,6 +69,7 @@ function game_setup() {
     soundControls();
 
 }
+
 // Game functionality
 function GameContainer() {
     this.soundElements = [];
@@ -76,7 +77,13 @@ function GameContainer() {
     this.startGame = function () {
         sessionStorage.setItem("startedGame", 1);
         startBtnState();
-        document.addEventListener("keydown", player.gameInput, false);
+        $(document).on("keydown", function (event) {
+            player.gameInput(event.keyCode);
+        });
+        $(document).on("keyup", function (event) {
+            player.removeInput(event.keyCode);
+        });
+        //document.addEventListener("keydown", player.gameInput, false);
         movePlayerCanvas();
         player.setDefaultValues();
         player.drawPlayer();
@@ -92,7 +99,6 @@ function GameContainer() {
     };
 
     this.resetPlayerPosition = function () {
-        alert("HAAAAEEELLPPP");
         ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
         playerCtx.clearRect(0, 0, playerCanvas.width, playerCanvas.height);
         drawStage();
@@ -132,37 +138,71 @@ function GameContainer() {
 function Player(playerX, playerY, eyeSize, mouthSize, playerSize, playerColor, eyeColor) {
     this.playerX = playerX;
     this.playerY = playerY;
-    this.vx = 4;
+    this.vx = 0;
     this.vy = 0;
     this.eyeSize = eyeSize;
     this.mouthSize = mouthSize;
     this.playerSize = playerSize;
     this.playerColor = playerColor;
     this.eyeColor = eyeColor;
-    this.keyMap = {};
+    this.keyMap = {65: false, 87: false, 68: false, 69: false};
 
 
-    this.gameInput = function () {
-        switch (event.keyCode) {
-            case 65: // A for moving Left
-                movePlayer("A");
-                break;
-            case 87: // W for jumping
-                movePlayer("W");
-                break;
-            case 68: // D for moving to the right
-                movePlayer("D"); // 
-                break;
-            case 69: // E for Entering door
-                movePlayer("E");
-                break;
-            default:
-                return;
+    this.gameInput = function (keyCode) {
+
+        if (keyCode in this.keyMap) {
+            this.keyMap[keyCode] = true;
+
+            if (this.keyMap[65]) { // A
+                this.vx = -velocityX;
+                //console.log("Pressed A");
+            }
+
+            if (this.keyMap[68]) { // D
+                this.vx = velocityX;
+            }
+
+            if (this.keyMap[87]) { // W
+                this.jump();
+            }
+
+            if (this.keyMap[69]) { // E
+                console.log(gameObjPos);
+            }
         }
     };
 
-    this.movePlayer = function () {
+    this.jump = function () {
+        let validJump = checkValidJump(this.playerY);
+        if (validJump) {
+            this.vy = -velocityY;
+        }
+    };
 
+    this.enterRoom = function(doorChoice) {
+
+
+    };
+
+    this.doorLocation = function () {
+        let checkDoor = checkValidDoorLocation();
+        if (checkDoor[0]) {
+            enterRoom(checkDoor[1]);
+        }
+    };
+
+    this.removeInput = function (key) {
+        if (key in this.keyMap) {
+
+            this.keyMap[key] = false;
+            if (key == 68 || key == 65) {
+                this.clearSpeedX();
+            }
+        }
+    };
+
+    this.clearSpeedX = function () {
+        this.vx = 0;
     };
 
     this.setDefaultValues = function () {
@@ -214,10 +254,40 @@ function Player(playerX, playerY, eyeSize, mouthSize, playerSize, playerColor, e
     this.update = function () {
         playerCtx.clearRect(0, 0, playerCanvas.width, playerCanvas.height);
         this.playerX += this.vx;
+        this.playerY += this.vy;
 
-        if (this.playerX + playerSize >= playerCanvas.width || this.playerX - playerSize < 0) {
-            this.vx = -this.vx;
+        if (this.playerX + playerSize > playerCanvas.width) {
+            this.vx = 0;
+            this.playerX = playerCanvas.width - playerSize - 2;
         }
+
+        if (this.playerX - playerSize < 0) {
+            this.vx = 0;
+            this.playerX = playerSize + 2;
+        }
+
+        if (this.playerY - playerSize == 0) {
+            this.vy = -this.vy;
+        }
+
+        if (this.playerY < playerCanvas.height - playerSize - 1) {
+            this.vy += gravity;
+        }
+
+        if (this.playerY + playerSize >= playerCanvas.height) {
+            this.vy = 0;
+            this.playerY = playerCanvas.height - playerSize - 1;
+        }
+
+        console.log(gameObjPos[1][3][1]);
+        console.log(Math.floor(this.playerY + playerSize));
+
+        if (Math.floor(this.playerY + playerSize) == gameObjPos[1][0][1] * 1.02 || Math.floor(this.playerY + playerSize) == gameObjPos[1][3][1]) {
+            console.log("I got here");
+            this.vy = 0;
+        }
+
+
 
         this.drawPlayer();
     };
@@ -230,10 +300,46 @@ function gameAnimation() {
     GameArea.update();
 }
 
-function movePlayer(keyInput) {
+function checkValidJump(playerYPos) {
+    if (playerYPos == gameObjPos[1][0][1] || playerYPos == gameObjPos[1][3][1] || playerYPos == playerCanvas.height - playerSize - 1) {
 
-    if (keyInput == "E") {
-        alert("Hello World");
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+//function enterRoom(doorChoice) {
+//    gameCanvas.clearRect(0, 0, gameCanvas.width)
+
+//        switch (roomChoice) {
+//            case :
+//                break;
+//            case :
+//                break;
+//            case : break;
+//    }
+
+
+//    drawRoom(subjects);
+//}
+
+
+function checkValidDoorLocation() {
+    let checkDoor = [];
+    let validLocation = false;
+    // Check position and return 
+
+    if (validLocation) {
+        return checkDoor;
+    }
+}
+
+function drawRoom(roomSubjects) {
+
+    for (let i = 0; i < roomSubjects.length; i++) {
+        // Draw
     }
 }
 
