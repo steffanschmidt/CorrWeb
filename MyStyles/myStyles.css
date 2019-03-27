@@ -254,7 +254,8 @@ figcaption {
     clear: both;
 }
 
-#sideMilling, #turningBench, #CNCMachine, #SmallCorrSetup, #videoPythonComp {
+#sideMilling, #turningBench, #CNCMachine, #SmallCorrSetup, #videoPythonComp,
+#dvdImg, #cdImg, #masterAFM, #replicaAFM, #masterSEM, #replicaSEM, #SEMPolystyrenePattern {
     clear: left;
     float: right;
 }
