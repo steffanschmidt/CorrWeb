@@ -16,6 +16,12 @@ var playerCtx = playerCanvas.getContext("2d");
 playerCtx.setTransform(scale, 0, 0, scale, 0, 0);
 window.addEventListener("resize", movePlayerCanvas);
 
+// Making room canvas
+var roomCanvas = document.getElementById("roomCvs");
+var roomCtx = roomCanvas.getContext("2d");
+roomCtx.setTransform(scale, 0, 0, scale, 0, 0);
+window.addEventListener("resize", moveRoomCanvas);
+
 
 // constants
 var doorImg = document.createElement("img");
@@ -40,7 +46,7 @@ var playerMouthSize = 15;
 var playerColor = "red";
 var playerEyeColor = "blue";
 // Initiating game elements
-var playerStartPosX = gameCanvas.width / 2 ;
+var playerStartPosX = gameCanvas.width / 2;
 var playerStartPosY = gameCanvas.height - playerSize;
 var GameArea = new GameContainer();
 var player = new Player(playerStartPosX, playerStartPosY, playerEyeSize, playerMouthSize, playerSize, playerColor, playerEyeColor);
@@ -60,12 +66,14 @@ function game_setup() {
         player.changeEyeColor(this.value);
     });
 
+    moveRoomCanvas();
     startBtnState();
     gameObjPos = drawStage();
 
-    if (sessionStorage.setItem("muted", 0) == null) {
+    if (sessionStorage.setItem("muted", 0) === null) {
         sessionStorage.setItem("muted", 0);
     }
+    
     soundControls();
 
 }
@@ -73,6 +81,7 @@ function game_setup() {
 // Game functionality
 function GameContainer() {
     this.soundElements = [];
+    
 
     this.startGame = function () {
         sessionStorage.setItem("startedGame", 1);
@@ -83,8 +92,10 @@ function GameContainer() {
         $(document).on("keyup", function (event) {
             player.removeInput(event.keyCode);
         });
-        //document.addEventListener("keydown", player.gameInput, false);
         movePlayerCanvas();
+        if (player === null) {
+            player = new Player(playerStartPosX, playerStartPosY, playerEyeSize, playerMouthSize, playerSize, playerColor, playerEyeColor);
+        }
         player.setDefaultValues();
         player.drawPlayer();
         gameAnimation();
@@ -95,7 +106,10 @@ function GameContainer() {
         sessionStorage.setItem("startedGame", 0);
         startBtnState();
         document.removeEventListener("keydown", player.gameInput);
+        player.resetKeyInput();
         playerCtx.clearRect(0, 0, playerCanvas.width, playerCanvas.height);
+        roomCanvas.style.zIndex = "-1";
+        player = null;
     };
 
     this.resetPlayerPosition = function () {
@@ -155,7 +169,6 @@ function Player(playerX, playerY, eyeSize, mouthSize, playerSize, playerColor, e
 
             if (this.keyMap[65]) { // A
                 this.vx = -velocityX;
-                //console.log("Pressed A");
             }
 
             if (this.keyMap[68]) { // D
@@ -167,7 +180,12 @@ function Player(playerX, playerY, eyeSize, mouthSize, playerSize, playerColor, e
             }
 
             if (this.keyMap[69]) { // E
-                console.log(gameObjPos);
+                if (roomCanvas.style.zIndex == "1") {
+                    roomCanvas.style.zIndex = "-1";
+                }
+                else {
+                    roomCanvas.style.zIndex = "1";
+                }
             }
         }
     };
@@ -199,6 +217,10 @@ function Player(playerX, playerY, eyeSize, mouthSize, playerSize, playerColor, e
                 this.clearSpeedX();
             }
         }
+    };
+
+    this.resetKeyInput = function () {
+        this.keyMap = null;
     };
 
     this.clearSpeedX = function () {
@@ -278,9 +300,6 @@ function Player(playerX, playerY, eyeSize, mouthSize, playerSize, playerColor, e
             this.vy = 0;
             this.playerY = playerCanvas.height - playerSize - 1;
         }
-
-        console.log(gameObjPos[1][3][1]);
-        console.log(Math.floor(this.playerY + playerSize));
 
         if (Math.floor(this.playerY + playerSize) == gameObjPos[1][0][1] * 1.02 || Math.floor(this.playerY + playerSize) == gameObjPos[1][3][1]) {
             console.log("I got here");
@@ -466,4 +485,13 @@ function movePlayerCanvas() {
     playerCanvas.style.top = bckGroundCanvasTop + "px";
     playerCanvas.width = 850 * scale;
     playerCanvas.height = 458 * scale;
+}
+
+function moveRoomCanvas() {
+    var bckGroundCanvasLeft = gameCanvas.getBoundingClientRect().left;
+    var bckGroundCanvasTop = gameCanvas.getBoundingClientRect().top;
+    roomCanvas.style.left = bckGroundCanvasLeft + "px";
+    roomCanvas.style.top = bckGroundCanvasTop + "px";
+    roomCanvas.width = 850 * scale;
+    roomCanvas.height = 458 * scale;
 }

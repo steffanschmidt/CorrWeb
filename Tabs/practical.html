@@ -38,8 +38,8 @@
                     I enjoy being able to create things on my own and having the ability to design practical applications for a range of purposes ranging from simple practical things
                     for ones home to scientific equipment. However mainly the latter. This is especially true for testing purposes and prototype to product development. Therefore following
                     my bachelors degree (2015) I took a one week course in CAD and machining at Aarhus University. This gave me the tools to both design and machine stuff on my own.
-                    It was also then I first came across 3D printing. Even since then I have expanded upon this and lately (February 2019), I just finished a month at the machining workshop at
-                    at the department of chemistry, Aarhus University. My main competencies in this field are:
+                    It was also then I first came across 3D printing. Ever since then I have expanded upon this, and I finished a month at the machining workshop at
+                    at the department of chemistry, Aarhus University, in March (2019). My main competencies in this field are:
                     <ul>
                         <li>CAD (Autodesk Inventor).</li>
                         <li>Machining - Milling and Turning.</li>
@@ -112,9 +112,10 @@
                     <p>
                         The setup can accommodate different geometric shapes due to the flexible design. Furthermore there are four small and large slots, where two of the latter are reserved for the main axes.
                         These can be opened and closed freely and are intended for aeration, wires, additional materials etc. The sample holders can be moved up and down by using the screws seen in the red and blue holder.
-                        Last there are two small holes at each of the four large slots for possibility of expansion in order to add features and/or equipment for experimental or practical reason.
-                        The entire setup was designed to be placed on top of a crystallization bowl as shown and that on top of a magnetic stirrer for heating purposes.
-                        Therefore due to a semi-closed environment, it is possible to simulate marine conditions and how it affects corrosion both in water and air.
+                        There are two small holes at each of the four large slots for possibility of expansion in order to add features and/or equipment for experimental or practical reason.
+                        The entire setup was designed to be placed on top of a crystallization bowl as shown and that on top of a magnetic stirrer for heating purposes. I will build the magnetic stirrer myself,
+                        since it will be much easier to integrate data collection, feedback loops for temperature control and estimating the corrosion current and much more. Furthermore it will also enable me to
+                        implement IoT for real-time monitoring and control. Due to a semi-closed environment, it is possible to simulate marine conditions and how it affects corrosion both in water and air.
                         Lastly there is a window for observation from the top, and since the sample object is in a crystallization bowl, it makes it possible to observe the progress with ones own eye throughout
                         the entire duration of the experiment.
                     </p>
@@ -162,17 +163,59 @@
 
                 <div class="generalPurposeBox">
                     <div class="subtitle"><p>Large Scale Corrosion Setup</p></div>
-                    <p>
-                        <figure id="largeCorrosionSetup">
-                            <img src="../Images/CorrosionSetupLarge.jpg" alt="Large Corrosion Setup" title="Large Corrosion Setup" />
-                            <figcaption>
-                                Corrosion setup made for large objects. This has an internal size of 40x25x20 cm and will be a closed system (with regards to aeration).
-                                The bottoms contains two aluminium blocks for heating and the top is transparent for observation and recording.
-                                Some parts are still missing along with all the electronics for the setup to be complete.
-                            </figcaption>
-                        </figure>
-                    </p>
+                    <figure id="largeCorrosionSetup">
+                        <img src="../Images/CorrosionSetupLarge.jpg" alt="Large Corrosion Setup" title="Large Corrosion Setup" />
+                        <figcaption>
+                            Corrosion setup made for large objects. This has an internal size of 40x25x20 cm and will be a closed system (with regards to aeration).
+                            The bottoms contains two aluminium blocks for heating and the top is transparent for observation and recording.
+                            Some parts are still missing along with all the electronics for the setup to be complete.
+                        </figcaption>
+                    </figure>
                 </div>
+                <p>
+                    As seen above I have been working on designing corrosion setups and making these with 3D print. Most of these have been small scale "kitchen experiments" with the electronics setup,
+                    which you can see in the next section. However these are limited both by space both test object wise and the amount of controls I can place on them. This is partly due to the fact
+                    that I myself have limited space in my apartment and partly due to a natural evolution of my knowledge in this field. Therefore I have been working on making a large setup that can
+                    be seen on the image. This is basically just a box right now, since I am waiting for my electronics to arrive. However the entire idea is creating an inert environment corrosion wise,
+                    where I can control a bunch of different parameters for testing corrosion on materials with real-time monitoring. Therefore most of it is made of compact laminate and POM. It consist of
+                    a stage (a frame) with spindles in corner for moving the test object up and down. There are two spindles for rotating the test object in the stage plane. All of the spindles are made of
+                    POM. This stage will also hold probes for measuring corrosion potentials and estimate currents and other addons (eg. conductivity, water temperature etc.). 
+                    The bottom of the setup contains two aluminium plates, which will have heater cartridges for heating the water in the setup with thermocouple control. The lid of the box is made of 
+                    polycarbonate, which makes it possible to observe the experiment at all times. The lid also has three slots, where it is possible to attach extra equipment (eg. a camera for recording).
+                </p>
+                <p>
+                    On the sides of the setup all the instrumentation and controls will be places. The movement will be controlled by step motors with two motors on stage for up/down movement and one
+                    for both of the axes in the stage plane. The setup will have 12V, 5V and 3.3V available for different purposes. Data collection and storage will be done through the microcontroller
+                    (Teensy 3.5). Overall the setup will be capable of the following:
+                </p>
+                <p>
+                    <ul>
+                        <li>Real-time monitoring of galvanic potential / voltage and current.</li>
+                        <li>Possibity to accelerate or stop corrosion.</li>
+                        <li>Temperature control in air and water.</li>
+                        <li>Air humidity.</li>
+                        <li>Rotation of the test object in both of the stage axes.</li>
+                        <li>Storage of data on SD card and Cloud.</li>
+                        <li>A display showing information and control.</li>
+                        <li>Chemically inert and closed environment.</li>
+                        <li>Transparent lid for observations and recording of the entire corrosion process.</li>
+                    </ul>
+
+                    <p>Other things that can/will be added in time:</p>
+                    <ul>
+                        <li>Conductivity.</li>
+                        <li>pH.</li>
+                    </ul>
+                    Note that this list is not exhaustive and one of the main features of a microcontroller is the ease of expansion, hence I can add things over time as I learn, or if I get suggestions.
+                </p>
+                <p>
+                    As a final note apart from the monitoring then I intend to place a camera on the lid for recording and using image processing to be able to correlate the numbers to the observed effects.
+                    This on its own allows for making an empirical model for simulating corrosion based. However in combination with theory it might be possible to make a generalization in order to simulate
+                    corrosion based on user inputs and determine lifetimes. At least that is the end goal.
+                </p>
+                <p>
+                    Lastly if you have any questions regarding this project or any of the other project I do, then feel free to contact me.
+                </p>
 
             </section>
 
@@ -187,11 +230,18 @@
                         </figcaption>
                     </figure>
 
-                <p>I started working with microcontrollers and electronics due to my interest in corrosion from my work at Terma as described in <a href="theoretical.html#theoryTerma">Materials Science</a></p>
-                <p>Further development of the model required a compact experimental setup, which was able to measure the galvanic voltage difference or potentials precisely and log these over long spans of time.</p>
                 <p>
-                    For this reason I chose to start learning how to work with and program a Teensy, which is a computational powerful Arduino.
-                    Read more about the programming of these in <a href="programming.html#microcontrollers">Programming</a>.
+                    I started working with microcontrollers and electronics due to my interest in corrosion from my work at Terma as described in <a href="theoretical.html#theoryTerma">Materials Science</a>
+                    Further development of the model required a compact experimental setup, which was able to measure the galvanic voltage difference or potentials precisely and log these over long spans of time.
+                    However since I only had a very basic setup back then and it was not available to me after Terma, I begun making my own to. For this reason I chose to start learning how to work with and
+                    program a microctronller, more specifically a Teensy, which is a computational powerful Arduino. Read more about the programming of these in <a href="programming.html#microcontrollers">
+                    Programming</a>. Aside from being able to program these I had to learn how to make electronic circuits. Therefore I used my contacts at Aarhus University and read stuff/watched videos
+                    on the internet to get started. I have learned a lot since then, but I am by no means an expert on it. I have worked quite a bit with amplification, motor control and data logging circuits 
+                    for my corrosion setups. This includes a lot of different basic components, but two worth mentioning are op-amps and in-amps.
+                </p>
+                <p>
+                    Lastly since I am developing a large setup, I will be working a lot more with internet of things, solid state relays, LCD displays, temperature control, feedback loops, (step) motor control, 
+                    probe design and much more.
                 </p>
             </section>
         </article>

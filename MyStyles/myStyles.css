@@ -222,7 +222,7 @@ figcaption {
     background-image: url(../GameArt/WallGame100x90.png);
     background-repeat: repeat;
     background-position: left bottom;
-    z-index: -1;
+    z-index: 0;
 }
 
 #gameControls, #gameChatter {
@@ -246,6 +246,15 @@ figcaption {
     position: absolute;
     width: 850px;
     height: 458px;
+    z-index: 2;
+}
+
+#roomCvs {
+    background-image: url(../GameArt/gameRoomExtended.png);
+    position: absolute;
+    width: 850px;
+    height: 458px;
+    z-index: -1;
 }
 
 .ImageAssembly {
@@ -255,8 +264,15 @@ figcaption {
 }
 
 #sideMilling, #turningBench, #CNCMachine, #SmallCorrSetup, #videoPythonComp,
-#dvdImg, #cdImg, #masterAFM, #replicaAFM, #masterSEM, #replicaSEM, #SEMPolystyrenePattern {
+#dvdImg, #cdImg, #masterAFM, #replicaAFM, #masterSEM, #replicaSEM, #SEMPolystyrenePattern,
+#succulentOffsets, #motherPlantStriped, #motherPlant, #highpressureapparatus, #highpressurecube,
+#powderSamples {
     clear: left;
+    float: right;
+}
+
+#strawberry {
+    clear: right;
     float: right;
 }
 
@@ -281,4 +297,28 @@ video {
 
 #animationControls {
     text-align: center;
+}
+
+.tabulator {
+    margin-left: 0.5em;
+}
+
+.listHeading {
+    font-weight: bold;
+}
+
+.hiddenElement {
+    display: none;
+}
+
+.alignCoreCompetenciesBtn {
+    float: right;
+}
+
+button {
+    border-radius: 4px;
+}
+
+a:link {
+    text-decoration: none;
 }
