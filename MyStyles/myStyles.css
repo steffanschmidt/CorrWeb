@@ -255,6 +255,7 @@ figcaption {
     width: 850px;
     height: 458px;
     z-index: -1;
+    opacity: 0;
 }
 
 .ImageAssembly {

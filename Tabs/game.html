@@ -99,7 +99,7 @@
     <script src="../MyScripts/siteAnimation.js"></script>
     <script src="../MyScripts/ActiveLink.js"></script>
     <script>
-        $(document).ready(function () {
+        $(window).on("load", function() {
             findActiveLink();
             startAnimation();
             game_setup();
